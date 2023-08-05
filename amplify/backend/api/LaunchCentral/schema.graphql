@@ -1,0 +1,6 @@
+type Team @model @auth(rules: [{allow: owner}, {allow: private, operations: [read]}]) {
+  id: ID!
+  teamName: String!
+  teamDescription: String!
+  teamCreationDate: AWSDateTime!
+}
